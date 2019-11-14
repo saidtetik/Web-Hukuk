@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>AVUKATLAR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <h3>#{avukat.baslik}</h3>
+            <h:dataTable value="#{avukat.getList()}" var="avukat" class="table table-striped">
+        <!--Burada var nesnesi her satır için özelleşmiş olacak ve DataTable bir döngü işletirmişcesine kayıtları ekrana dökecek.-->
+            
+        <h:column>
+                <f:facet name="header">
+                    <h:outputLabel>ADI</h:outputLabel>
+                </f:facet>
+            <h:outputLabel value="#{avukat.name}"/>
+            </h:column>
+        <h:column>
+                <f:facet name="header">
+                    <h:outputLabel>SOYADI</h:outputLabel>
+                </f:facet>
+                <h:outputLabel value="#{avukat.surname}"/>
+            </h:column>
+        <h:column>
+                <f:facet name="header">
+                    <h:outputLabel>EMAİLİ</h:outputLabel>
+                </f:facet>
+                <h:outputLabel value="#{avukat.email}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputLabel>YAŞI</h:outputLabel>
+                </f:facet>
+                <h:outputLabel value="#{avukat.age}"/>
+            </h:column>
+                 <h:column>
+                <f:facet name="header">
+                    <h:outputLabel>ÇALIŞTIĞI İL</h:outputLabel>
+                </f:facet>
+                <h:outputLabel value="#{avukat.city}"/>
+            </h:column>
+        </h:dataTable>
+            <h:form>
+                <h:commandButton value ="Geri Dön" class="btn btn-primary btn-block" style="width: 200px;" action="avukatlar.xhtml"/>
+                 
+            </h:form>
+        </div>
+    </body>
+</html>

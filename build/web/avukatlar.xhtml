@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>AVUKATLAR</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/menu.css"></link>
+        <link rel="stylesheet" href="css/hizmetler.css"></link>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            <style>
+          
+label{
+    font-weight: 600;
+}
+.custom-control{
+    font-weight: normal;
+}
+.dropdown-toggle{
+    padding-left: 10px;
+    border-radius: 0px !important;
+}
+.dropdown.dropdown-lg .dropdown-menu {
+    padding: 15px;
+}
+.input-group .form-control{
+    width: 100%;
+    border-radius: 0.25rem !important;
+}
+.dropdown.dropdown-lg .dropdown-menu{
+    min-width: 320px;
+}
+.dropdown-menu{
+    box-shadow: 1px 4px 8px -1px #c1c1c1;
+}
+h1{
+    color: black;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+}
+            .cover{
+    
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+}
+
+.class{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    left: 800px;
+    right: 0;
+    margin-bottom: 10%;
+    margin: 0 auto;
+}
+.content{
+    box-sizing: border-box;
+  background-color: rgba(34, 4, 0, 0.7);
+  position: relative;
+  text-align:center;
+  width: 70%;
+  height: auto;
+  margin: -50px -125px;
+  padding: 0px;
+  display:block;
+  padding: 30px 10px 30px 50px;
+  margin-top: 5%;
+}
+
+.avukat{
+    
+    box-sizing: border-box;
+  background-color:black;
+  position:relative;
+  text-align:left;
+  width: 25%;
+  height: 100%;
+  margin: -152px -10px;
+  display:block;
+  padding: 20px 0px 50px 50px;
+  margin-bottom: 100%;
+    
+}
+hr { 
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+h4 {
+    color: white;
+    font-size: 14px;
+    font-family: 'abril-text', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.section{
+    background-attachment:inherit;
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0px 30px 0;
+    min-height: 150px !important;
+    width: 100%;
+    
+}
+
+.textbox{
+    border:blue;
+    border-bottom: 2px solid red;
+    letter-spacing: 1px;
+    font-size: 10px;
+        margin: 0 0 20px 0;
+    text-transform: none;
+    max-width: 80%;
+    resize: none;
+    padding: 8px 15px;
+    width: 100%;
+}
+
+.buttonbox{
+     border:blue;
+    border-bottom: 2px solid red;
+    letter-spacing: 1px;
+    font-size: 10px;
+        margin: 0 0 20px 0;
+    text-transform: none;
+    max-width: 20%;
+    resize: none;
+    padding: 8px 15px;
+    width: 100%;
+}
+.buttonbox:hover{
+    background:red;
+    color:white;
+}
+.check{
+    border:blue;
+    border-bottom: 2px solid red;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+
+
+        </style>
+    </h:head>
+    <h:body>
+        <div class="menu">
+            <ul>
+		<li><a href="index.html">Anasayfa</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Hizmetler</a>
+                    <div class="dropdown-content">
+                        <a href="aileHukuk.xhtml">Aile Hukuku</a>
+                        <a href="cezaHukuk.xhtml">Ceza Hukuku</a>
+                        <a href="idareHukuk.xhtml">İdare ve Vergi Hukuku</a>
+                        <a href="sirketlerHukuk.xhtml">Şirketler Hukuku</a>
+                     </div>
+                </li>
+                <li><a href="avukatlar.xhtml">Avukatlar</a></li>
+		<li><a href="hakkimizda.xhtml">Hakkımızda</a></li>
+		<li><a href="iletisim.xhtml">İletisim</a></li>
+                <li style="float: right"><a href="adminGiris.xhtml">ADMİN</a></li>
+            </ul>
+        </div>
+            <div class="container" style="width: 600px; margin-left:400px; margin-top: 100px; margin-right: 500px;">
+            <h:form class="form-horizontal" role="form">
+                <h2>AVUKAT ARAMA</h2>
+                
+                <div class="form-group ">
+                    
+                    <div class="col-sm-9">
+                        <h:inputText  a:placeholder="Mehmet" class="form-control" 
+                                     value="#{avukat.name}"/>
+                    </div>
+                    <label for="firstName" ><h:commandButton class="btn btn-primary btn-block" 
+                                                             value="Adıyla Ara" 
+                                                             style="width:140px" 
+                                                             action="gösterMisafir.xhtml"
+                                                             actionListener="#{avukat.ara}">
+                            <f:attribute name="button" value="isim"/>
+                        </h:commandButton>
+                    </label>
+                 </div>
+                <div class="form-group">
+                    
+                    <div class="col-sm-9">
+                        <h:inputText  a:placeholder="23" class="form-control" 
+                                     value="#{avukat.age}"/>
+                        
+                    </div>
+                            <label for="firstName" ><h:commandButton class="btn btn-primary btn-block" 
+                                                                     value="Yaşıyla Ara" 
+                                                                     style="width:140px"
+                                                                     action="gösterMisafir.xhtml"
+                                                                     actionListener="#{avukat.ara}">
+                                    <f:attribute name="button" value="yas"/>
+                        </h:commandButton></label>
+                    
+                </div>
+                <div class="form-group">
+                    
+                    <div class="col-sm-9">
+                        <h:selectOneMenu  class="form-control" value="#{avukat.city}">
+                            
+                            <f:selectItem itemLabel="İstabul" itemValue="İstanbul"/>
+                            <f:selectItem itemLabel="Ankara" itemValue="Ankara"/>
+                            <f:selectItem itemLabel="İzmir" itemValue="İzmir"/>
+                            <f:selectItem itemLabel="Kocaeli" itemValue="Kocaeli"/>
+                            <f:selectItem itemLabel="Bursa" itemValue="Bursa"/>
+                        </h:selectOneMenu>
+                        
+                    </div>
+                    <label><h:commandButton class="btn btn-primary btn-block" 
+                                            value="Şehir ile Ara" 
+                                            style="width:140px" 
+                                            action="gösterMisafir.xhtml"
+                                            actionListener="#{avukat.ara}">
+                        <f:attribute name="button" value="sehir"/>
+                        </h:commandButton>
+                    </label>
+                    
+                </div>
+                
+                <div class="form-group">
+                    
+                    <div class="col-sm-9">
+                        <h:selectOneRadio  value="#{avukat.gender}" >
+                                <f:selectItem  itemLabel="Kadın" itemValue="Kadın"/>
+                                <f:selectItem  itemLabel="Erkek" itemValue="Erkek"/>
+                            </h:selectOneRadio>
+                        
+                    </div>
+                            <label for="firstName" ><h:commandButton class="btn btn-primary btn-block" 
+                                                                     value="Cinsiyet ile  Ara" 
+                                                                     style="width:140px"
+                                                                     action="gösterMisafir.xhtml"
+                                                                     actionListener="#{avukat.ara}">
+                                    <f:attribute name="button" value="cinsiyet"/>
+                        </h:commandButton></label>
+                    
+                </div>
+                <div class="form-group">
+                    
+                    <div class="col-sm-9">
+                        <h:selectOneMenu  class="form-control" value="#{avukat.davaSelect}">
+                            
+                            <f:selectItem itemLabel="Aile Hukuku" itemValue="Aile"/>
+                            <f:selectItem itemLabel="Ceza Hukuku" itemValue="Ceza"/>
+                            <f:selectItem itemLabel="İdare ve Vergi Hukuku" itemValue="İdare"/>
+                            <f:selectItem itemLabel="Şirketler Hukuku" itemValue="Şirket"/>
+                            
+                        </h:selectOneMenu>
+                        
+                    </div>
+                            <label for="firstName" ><h:commandButton class="btn btn-primary btn-block" 
+                                                                     value="Davalara Göre Ara" 
+                                                                     style="width:140px"
+                                                                     action="gösterMisafir.xhtml"
+                                                                     actionListener="#{avukat.ara}">
+                                        <f:attribute name="button" value="dava"/>
+                        </h:commandButton></label>
+                    
+                </div>
+                
+                
+                
+              
+                
+            </h:form> <!-- /form -->
+            </div>
+       
+            
+    </h:body>
+</html>

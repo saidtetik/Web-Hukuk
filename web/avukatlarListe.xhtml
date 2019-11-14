@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>AVUKATLAR LİSTE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+       <h:dataTable value="#{avukat.getAll()}" var="avukat" class="table table-striped">
+        <!--Burada var nesnesi her satır için özelleşmiş olacak ve DataTable bir döngü işletirmişcesine kayıtları ekrana dökecek.-->
+            <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>ID</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+                <h:outputLabel value="#{avukat.id}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>ADI</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+            <h:outputLabel value="#{avukat.name}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>SOYADI</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+                <h:outputLabel value="#{avukat.surname}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>EMAİL</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+                <h:outputLabel value="#{avukat.email}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>CİNSİYETİ</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+                <h:outputLabel value="#{avukat.gender}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>YAŞI</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+            <h:outputLabel value="#{avukat.age}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        <h:column>
+                <f:facet name="header"><!--Sütunun başlığını belirteceğimiz etiket.-->
+                    <h:outputLabel>ÇALIŞTIĞI İL</h:outputLabel><!--Sütunun başlığı.-->
+                </f:facet>
+                <h:outputLabel value="#{avukat.city}"/><!--Sütuna yazılacak değer .-->
+            </h:column>
+        </h:dataTable>
+            <h:form>
+                <h:commandButton value ="Admin Anasayfası'na Dön" class="btn btn-primary btn-block" style="width: 200px;" action="adminPage.xhtml"/>
+                 
+            </h:form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core"
+ >
+    <head>
+        <title>ADMİN SAYFASI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="css/adminPage.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <div class="fadeIn first">
+                    <h3 style="display: inline-block; padding: 12px 24px; font-weight: bold; color: rgb(120,120,120);">
+                        Hoşgeldiniz!
+                    </h3>
+                </div>
+                <h:form>
+                    <h:commandButton   class="fadeIn second" value="Avukat Ekle" style="width:300px" action="avukatEkle.xhtml"/>
+                    <h:commandButton  class="fadeIn third" value="Avukat Sil" style="width:300px" action="avukatSil.xhtml"/>
+                    <h:commandButton  class="fadeIn fourth" value="Avukat Guncelle" style="width:300px" action="avukatGuncelle.xhtml"/>
+                    <!--<h:commandButton  class="fadeIn fourth" value="Avukat Ara" style="width:300px" action="avukatAra.xhtml"/>-->
+                    <h:commandButton  class="fadeIn fourth" value="Avukatları Listele" style="width:300px" action="avukatlarListe.xhtml"/>
+                    <h:commandButton value="Çıkış"  action="adminGiris.xhtml"/>
+                </h:form>
+                <div id="formFooter">
+                    <h:outputText value ="#{giris.adminName} #{giris.adminSurname}"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
